@@ -1,0 +1,59 @@
+<div class="layout-sidebar" [ngClass]="{'active': true}"  #container>
+    <ng-sidebar-container style="position: static; background-color: transparent;">
+    
+        <ng-sidebar id="expanded" [dock]="true" dockedSize="60px" [(opened)]="layout.sidebar_opened" 
+            mode="push" style="background-color: transparent;">
+            <div class="layout-menu">
+                <div class="menu-category" *ngIf="layout.sidebar_opened" routerLink="/">
+                    <img src="../../../../assets/images/full_logo.png" height="36" style="padding-left: 27px; padding-top: 16px;">
+                </div>
+
+                <div class="menu-items">
+                    <div *ngIf="!layout.sidebar_opened" class="logo-icon" uk-tooltip="title: Home; pos: right" routerLink="/">
+                        <img src="../../../../assets/images/logo.png">
+                    </div>
+                    <a routerLink="/">
+                        <div *ngIf="layout.sidebar_opened">
+                            <i class="pi pi-th-large uk-margin-small-right"></i> Dashboard
+                        </div>
+                        <div class="menu-icon" *ngIf="!layout.sidebar_opened" uk-tooltip="title: Dashboard; pos: right" >
+                            <i class="pi pi-th-large uk-margin-small-right"></i>
+                        </div>
+                    </a>
+                    <a routerLink="/">
+                        <div *ngIf="layout.sidebar_opened">
+                            <i class="pi pi-cog uk-margin-small-right"></i> Analyser
+                        </div>
+                        <div class="menu-icon" *ngIf="!layout.sidebar_opened" uk-tooltip="title: Analyser; pos: right">
+                            <i class="pi pi-cog uk-margin-small-right"></i>
+                        </div>
+                    </a>
+                    <a routerLink="/">
+                        <div *ngIf="layout.sidebar_opened">
+                            <i class="pi pi-copy uk-margin-small-right"></i> Articles
+                        </div>
+                        <div class="menu-icon" *ngIf="!layout.sidebar_opened" uk-tooltip="title: Articles; pos: right">
+                            <i class="pi pi-copy uk-margin-small-right"></i>
+                        </div>
+                    </a>
+                    <a routerLink="/">
+                        <div *ngIf="layout.sidebar_opened">
+                            <i class="pi pi-book uk-margin-small-right"></i> Audit Logs
+                        </div>
+                        <div class="menu-icon" *ngIf="!layout.sidebar_opened" uk-tooltip="title: Audit Logs; pos: right">
+                            <i class="pi pi-book uk-margin-small-right"></i>
+                        </div>
+                    </a>
+                </div>
+            
+            </div>
+        </ng-sidebar>
+        <div ng-sidebar-content>
+            <app-topbar></app-topbar>
+            <div class="content-section" style="min-height: 100vh;">
+                
+            </div>
+        </div>
+    
+    </ng-sidebar-container>
+</div>

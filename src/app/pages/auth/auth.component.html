@@ -1,0 +1,48 @@
+<div class="p-grid content-section">
+    <div class="p-col-12 p-md-5 p-text-center login-container">
+        <div class="login-form">
+            <div>
+                <a routerLink="/">
+                    <img src="../../assets/images/hpe_aruba_s_pos_rgb.png" width="215">
+                </a>
+            </div>
+            <div class="welcome">Welcome back! Please login to your account.</div>
+            <form (ngSubmit)="onSubmit()">
+                <div style="margin-top: 30px;">
+                    <div class="uk-inline" style="width: 100%;">
+                        <span class="uk-form-icon uk-form-icon-flip pi pi-user"></span>
+                        <input class="uk-input form-field" [formControl]="email" type="text" placeholder="Email address">
+                    </div>
+                </div>
+                <div style="margin-top: 30px;">
+                    <div class="uk-inline" style="width: 100%;">
+                        <a class="clickable" class="uk-form-icon uk-form-icon-flip pi"
+                            [ngClass]="{'pi-eye': hide, 'pi-eye-slash': !hide}" (click)="hide = !hide"></a>
+                        <input class="uk-input form-field" [formControl]="password" [type]="hide ? 'password' : 'text'" placeholder="Password">
+                    </div>
+                </div>
+                <div style="margin: 41px 0px;">
+                    <button pButton type="submit" label="Login" class="p-button-lg form-field"
+                        style="height: 54px;" [disabled]="!login.valid"></button>
+                </div>
+            </form>
+            <p-divider p-divider-horizontal align="center">
+                Or
+            </p-divider>
+            <div style="margin-top: 30px;">
+                <a href="#">Login via SSO</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <div>
+                &copy; Copyright 2021 Hewlett Packard Enterprise Development LP
+            </div>
+        </div>
+    </div>
+    <div class="p-col-12 p-md-7 p-d-none p-d-md-inline-flex">
+        <div class="login-image">
+            <img src="../../assets/images/aruba-a.png" class="aruba-a">
+        </div>
+    </div>
+</div>
+<p-toast></p-toast>

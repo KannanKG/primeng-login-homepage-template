@@ -1,0 +1,53 @@
+.p-grid {
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+.p-md-5,
+.p-md-7 {
+  padding: 0;
+}
+.login-image {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../../assets/images/josh-hild-6IbaeeMr0Wo-unsplash1.png");
+  background-size: cover;
+  background-origin: border-box;
+}
+.login-image .aruba-a {
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  width: 80%;
+  height: 90%;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 84px 79px 25px 79px;
+}
+.welcome {
+  margin-top: 76px;
+  size: 18px;
+  line-height: 27px;
+  letter-spacing: 2px;
+  color: #a7b3be;
+}
+.form-field {
+  width: 100%;
+  height: 64px;
+  border-radius: 5px;
+}
+.login-form {
+  text-align: center;
+}
+.copyright {
+  color: #797979;
+  padding-top: 50px;
+}
+.clickable {
+  cursor: pointer;
+}

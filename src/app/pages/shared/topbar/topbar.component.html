@@ -1,0 +1,16 @@
+<div class="layout-topbar">
+    <button pButton type="button" label="&#9776;"
+        class="p-button-rounded p-button-secondary p-button-text" (click)="_toggleSidebar()"></button>
+    <span style="font-weight: 600; font-size: 20px; margin-left: 23px;">Page Title</span>
+    <span class="topbar-menu">
+        <span style="vertical-align: middle; line-height: 39px; margin: 0 43px;">
+            <i class="pi pi-bell"></i>
+        </span>
+        <p-avatar label="K" styleClass="p-mr-2" shape="circle"></p-avatar>
+        <span style="margin-left: 12px; font-size: 14px; font-weight: 400;">Welcome, <br> Kannan</span>
+        <span style="vertical-align: middle; line-height: 39px; margin-left: 18px;" (click)="menu.toggle($event)">
+            <i class="pi pi-chevron-down"></i>
+        </span>
+        <p-menu #menu [popup]="true" [model]="items"></p-menu>
+    </span>
+</div>
